@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostify - Old PC to Real Domain Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🚀 Hostify</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#docs">Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="glitch" data-text="Turn Old PCs Into Production Servers">
+                Turn Old PCs Into Production Servers
+            </h1>
+            <p class="subtitle">Host applications from anywhere using Cloudflare Tunnels - no port forwarding, no dynamic DNS, just one line of code.</p>
+            
+            <div class="code-demo">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="filename">host.py</span>
+                </div>
+                <pre><code><span class="keyword">from</span> hostify <span class="keyword">import</span> Host
+
+Host(
+    domain=<span class="string">"app.example.com"</span>,
+    port=<span class="number">3000</span>
+).serve()</code></pre>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Line of Code</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Port Forwarding</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">HTTPS Secure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Hostify?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Real Domains</h3>
+                    <p>Use your own domain or subdomain. No ugly URLs, just professional hosting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Auto HTTPS</h3>
+                    <p>Automatic SSL certificates via Cloudflare. Secure by default.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Host Anywhere</h3>
+                    <p>Old PCs, home servers, laptops - turn any machine into a production server.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Simple API</h3>
+                    <p>One line of code to go live. No complex configuration needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Auto-Recovery</h3>
+                    <p>Automatically restarts on connection issues. Your site stays online.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>Clean Shutdown</h3>
+                    <p>Ctrl+C cleans everything. No leaked tunnels or DNS records.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2>Live Demo</h2>
+            <div class="demo-card">
+                <div class="demo-info">
+                    <h3>🎉 This Site is Hosted via Hostify!</h3>
+                    <p>You're currently viewing a static website hosted using the hostify library.</p>
+                    <div class="demo-details">
+                        <div class="detail">
+                            <strong>Domain:</strong> hostify.yaspik.tech
+                        </div>
+                        <div class="detail">
+                            <strong>Method:</strong> Static file hosting
+                        </div>
+                        <div class="detail">
+                            <strong>Code:</strong> Just 3 lines of Python
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="docs-section">
+        <div class="container">
+            <h2>Quick Start</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install Hostify</h3>
+                        <div class="code-block">
+                            <code>pip install hostify</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get Cloudflare API Token</h3>
+                        <p>Create a token with Tunnel, DNS, and Zone permissions</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Set Environment Variable</h3>
+                        <div class="code-block">
+                            <code>export CF_API_TOKEN="your_token"</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Host Your App</h3>
+                        <div class="code-block">
+                            <code>Host(domain="app.example.com", port=3000).serve()</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ for developers who want to host from anywhere</p>
+            <p class="footer-links">
+                <a href="https://github.com/yourusername/hostify">GitHub</a> • 
+                <a href="#docs">Documentation</a> • 
+                <a href="https://cloudflare.com">Powered by Cloudflare</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
