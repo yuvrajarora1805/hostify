@@ -1,13 +1,27 @@
-# Changelog
+Changelog
+=========
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_,
+and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
 
-## [0.1.0] - 2026-01-11
+[0.1.1] - 2026-01-11
+--------------------
 
-### Added
+Changed
+~~~~~~~
+
+- Updated README with correct GitHub repository URLs
+- Added Star History badge with correct username
+- Updated all documentation links
+
+[0.1.0] - 2026-01-11
+--------------------
+
+Added
+~~~~~
+
 - Initial release of hostify library
 - One-line API for hosting applications via Cloudflare Tunnels
 - Support for static file hosting
@@ -23,36 +37,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Working examples (static_site.py, existing_server.py, flask_example.py)
 - MIT License
 
-### Fixed
+Fixed
+~~~~~
+
 - Windows Unicode encoding issues (replaced emojis with ASCII)
 - Port validation for detecting running servers
 - Static server startup validation with retry logic
 - Tunnel route configuration for proper hostname routing
 
-### Tested
+Tested
+~~~~~~
+
 - Live deployment on hostify.yaspik.tech (static site)
 - Live deployment on app.yaspik.tech (Flask app on port 5000)
 - All core functionality verified
 - Cross-platform compatibility confirmed
 
----
+Planned Features
+----------------
 
-## [Unreleased]
-
----
-
-## [0.1.1] - 2026-01-11
-
-### Changed
-- Updated README with correct GitHub repository URLs
-- Added Star History badge with correct username
-- Updated all documentation links
-
----
-
-## [0.1.0] - 2026-01-11
-
-### Planned Features
 - Multiple domain support
 - Web dashboard for management
 - Authentication system
@@ -61,7 +64,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Health checks and monitoring
 - Configuration file support
 - CLI tool
-
----
-
-[0.1.0]: https://github.com/yourusername/hostify/releases/tag/v0.1.0

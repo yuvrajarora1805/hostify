@@ -5,12 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="hostify",
-    version="0.1.0",
-    author="Hostify Contributors",
-    description="Host applications from old PCs using Cloudflare Tunnels",
+    version="0.1.1",
+    author="Yuvraj Arora",
+    author_email="yuvrajaroraw18@gmail.com",
+    description="Effortless application hosting using Cloudflare Tunnels.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/hostify",
+    url="https://github.com/yuvrajarora1805/hostify",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",

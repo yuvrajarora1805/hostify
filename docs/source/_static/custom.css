@@ -1,0 +1,350 @@
+/* Custom CSS to match Hostify demo site theme */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Root variables matching demo site colors - IMPROVED VISIBILITY */
+:root {
+    --primary-gradient-start: #667eea;
+    --primary-gradient-end: #764ba2;
+    --bg-dark: #0a0e27;
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --code-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Override RTD theme background */
+.wy-nav-side {
+    background: var(--bg-dark) !important;
+    border-right: 1px solid var(--border-color);
+}
+
+.wy-side-nav-search {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wy-side-nav-search input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px;
+}
+
+.wy-side-nav-search input[type="text"]::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Sidebar navigation */
+.wy-menu-vertical a {
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: var(--bg-card) !important;
+    color: var(--primary-gradient-start) !important;
+}
+
+.wy-menu-vertical li.current > a {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%) !important;
+    border-right: 3px solid var(--primary-gradient-start) !important;
+    color: var(--text-primary) !important;
+}
+
+.wy-menu-vertical li.current a {
+    border: none;
+}
+
+/* Main content area */
+.wy-nav-content-wrap {
+    background: var(--bg-dark) !important;
+}
+
+.wy-nav-content {
+    background: var(--bg-dark) !important;
+    color: var(--text-primary) !important;
+    max-width: 1200px !important;
+}
+
+/* Typography */
+body,
+.wy-nav-content {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+h1 {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5em !important;
+}
+
+p, li, td {
+    color: #e2e8f0 !important;
+    line-height: 1.8 !important;
+}
+
+a {
+    color: var(--primary-gradient-start) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-gradient-end) !important;
+    text-decoration: underline;
+}
+
+/* Code blocks */
+.highlight,
+pre,
+code {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+code {
+    color: #c3e88d !important;
+    font-family: 'Courier New', monospace !important;
+    padding: 2px 6px;
+}
+
+.highlight pre {
+    padding: 20px !important;
+    overflow-x: auto;
+}
+
+/* Inline code */
+code.literal {
+    background-color: rgba(102, 126, 234, 0.15) !important;
+    color: #a5d6ff !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+    font-weight: 500 !important;
+}
+
+/* Admonitions (notes, warnings, etc.) */
+.admonition {
+    background-color: var(--bg-card) !important;
+    border-left: 4px solid var(--primary-gradient-start) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+}
+
+.admonition-title {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600 !important;
+}
+
+.admonition.note {
+    border-left-color: #667eea !important;
+}
+
+.admonition.warning {
+    border-left-color: #ffbd2e !important;
+}
+
+.admonition.tip {
+    border-left-color: #27c93f !important;
+}
+
+/* Tables */
+table.docutils {
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-card) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+table.docutils thead {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%) !important;
+}
+
+table.docutils th {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+    border-bottom: 2px solid var(--border-color) !important;
+    padding: 12px !important;
+}
+
+table.docutils td {
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 12px !important;
+}
+
+/* Breadcrumbs */
+.wy-breadcrumbs {
+    color: var(--text-secondary) !important;
+}
+
+.wy-breadcrumbs a {
+    color: var(--primary-gradient-start) !important;
+}
+
+/* Footer */
+footer {
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--border-color) !important;
+    background-color: transparent !important;
+}
+
+/* Search results */
+.search li {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+    padding: 15px !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-gradient-end);
+}
+
+/* Logo/Project name in sidebar */
+.wy-side-nav-search > a {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+}
+
+.wy-side-nav-search .wy-dropdown > a {
+    color: var(--text-primary) !important;
+}
+
+/* Version selector */
+.rst-versions {
+    background: var(--bg-dark) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.rst-versions a {
+    color: var(--primary-gradient-start) !important;
+}
+
+/* Button styling */
+.btn {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%) !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Mobile menu button */
+.wy-nav-top {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%) !important;
+}
+
+/* Definition lists (for API docs) */
+dl.class,
+dl.function,
+dl.method,
+dl.attribute {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+}
+
+dt {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%) !important;
+    border-left: 4px solid var(--primary-gradient-start) !important;
+    padding: 10px 15px !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+dd {
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+}
+
+/* Parameter lists */
+.field-list {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    border: 1px solid rgba(102, 126, 234, 0.2) !important;
+}
+
+.field-list dt {
+    background: transparent !important;
+    border: none !important;
+    color: #a5b4fc !important;
+    font-weight: 600 !important;
+}
+
+.field-list dd {
+    color: #e2e8f0 !important;
+}
+
+/* Signature styling */
+.sig-name {
+    color: #a5b4fc !important;
+    font-weight: 700 !important;
+}
+
+.sig-param {
+    color: #e2e8f0 !important;
+}
+
+.sig-paren {
+    color: #cbd5e1 !important;
+}
+
+em.property {
+    color: #c084fc !important;
+}
+
+/* Animated gradient background (subtle) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}

@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hostify"
-version = "0.1.0"
-description = "Host applications from old PCs using Cloudflare Tunnels"
+version = "0.1.1"
+description = "Effortless application hosting using Cloudflare Tunnels."
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [
-    {name = "Hostify Contributors"}
+    {name = "Yuvraj Arora", email = "yuvrajaroraw18@gmail.com"}
 ]
 keywords = ["cloudflare", "tunnel", "hosting", "server", "deployment"]
 classifiers = [
@@ -30,10 +30,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/hostify"
-Documentation = "https://github.com/yourusername/hostify#readme"
-Repository = "https://github.com/yourusername/hostify"
-Issues = "https://github.com/yourusername/hostify/issues"
+Homepage = "https://github.com/yuvrajarora1805/hostify"
+Documentation = "https://github.com/yuvrajarora1805/hostify#readme"
+Repository = "https://github.com/yuvrajarora1805/hostify"
+Issues = "https://github.com/yuvrajarora1805/hostify/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
