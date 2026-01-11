@@ -309,7 +309,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Documentation:** [Full Docs](INSTALL.md)
-- **Issues:** [GitHub Issues](https://github.com/yourusername/hostify/issues)
+- **Issues:** [GitHub Issues](https://github.com/yuvrajarora1805/hostify/issues)
 - **Cloudflare Setup:** [Setup Guide](CLOUDFLARE_SETUP.md)
 
 ---
@@ -334,4 +334,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you find this project useful, please consider giving it a star on GitHub!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/hostify&type=Date)](https://star-history.com/#yourusername/hostify&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=yuvrajarora1805/hostify&type=Date)](https://star-history.com/#yuvrajarora1805/hostify&Date)
