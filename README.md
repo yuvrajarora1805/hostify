@@ -334,4 +334,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you find this project useful, please consider giving it a star on GitHub!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yuvrajarora1805/hostify&type=Date)](https://star-history.com/#yuvrajarora1805/hostify&Date)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yuvrajarora1805/hostify&type=date&legend=top-left)](https://www.star-history.com/#yuvrajarora1805/hostify&type=date&legend=top-left)
+
