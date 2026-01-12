@@ -7,21 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* ========================================
-   SIDEBAR - ENHANCED VISIBILITY
+   SIDEBAR - LIGHT BACKGROUND WITH DARK TEXT
    ======================================== */
 
-/* Sidebar Background - Dark gradient with neon border */
+/* Sidebar Background - Light gradient for dark text visibility */
 .wy-nav-side {
-    background: linear-gradient(180deg, #0f1432 0%, #1a1f3a 50%, #0f1432 100%) !important;
-    border-right: 2px solid #667eea !important;
-    box-shadow: 4px 0 30px rgba(102, 126, 234, 0.3) !important;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%) !important;
+    border-right: 3px solid #667eea !important;
+    box-shadow: 4px 0 30px rgba(102, 126, 234, 0.2) !important;
     font-family: 'Inter', sans-serif !important;
 }
 
-/* Logo/Search Area - Purple Gradient */
+/* Logo/Search Area - Keep purple gradient */
 .wy-side-nav-search {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4) !important;
 }
 
@@ -35,16 +35,85 @@
 
 /* Search Input */
 .wy-side-nav-search input[type="text"] {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
     color: #ffffff !important;
     border-radius: 8px !important;
 }
 
 .wy-side-nav-search input[type="text"]:focus {
-    background: rgba(255, 255, 255, 0.3) !important;
-    border-color: rgba(255, 255, 255, 0.6) !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.35) !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Navigation Menu Items - DARK TEXT ON LIGHT BACKGROUND */
+.wy-menu-vertical a {
+    color: #1a202c !important;  /* Very dark gray/black */
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-left: 4px solid transparent !important;
+    padding: 0.7em 1.5em !important;
+}
+
+.wy-menu-vertical a:hover {
+    background: rgba(102, 126, 234, 0.15) !important;
+    color: #667eea !important;  /* Purple on hover */
+    border-left-color: #667eea !important;
+    transform: translateX(5px);
+    box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Active/Current Menu Item - DARK TEXT WITH PURPLE HIGHLIGHT */
+.wy-menu-vertical li.current > a {
+    background: rgba(102, 126, 234, 0.2) !important;
+    color: #1a202c !important;  /* Dark text */
+    border-left: 5px solid #667eea !important;
+    font-weight: 700 !important;
+    box-shadow: inset 0 0 25px rgba(102, 126, 234, 0.15) !important;
+}
+
+.wy-menu-vertical li.current a {
+    border-right: none !important;
+}
+
+/* Expanded Menu - Level 1 */
+.wy-menu-vertical li.toctree-l1.current > a {
+    background: rgba(102, 126, 234, 0.18) !important;
+    border-left: 5px solid #667eea !important;
+}
+
+/* Expanded Menu - Level 2 */
+.wy-menu-vertical li.toctree-l2 > a {
+    color: #2d3748 !important;  /* Dark gray */
+    padding-left: 2.5em !important;
+    font-weight: 500 !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: rgba(118, 75, 162, 0.15) !important;
+    border-left-color: #764ba2 !important;
+    color: #1a202c !important;
+}
+
+/* Expanded Menu - Level 3 */
+.wy-menu-vertical li.toctree-l3 > a {
+    color: #4a5568 !important;  /* Medium dark gray */
+    padding-left: 3.5em !important;
+}
+
+/* Section Headers in Sidebar - DARK PURPLE */
+.wy-menu-vertical p.caption {
+    color: #5b21b6 !important;  /* Dark purple */
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    font-size: 0.9em !important;
+    letter-spacing: 2px !important;
+    margin-top: 1.5em !important;
+    padding-left: 1.5em !important;
+    border-left: 5px solid #667eea !important;
+    text-shadow: none !important;  /* No glow on light background */
 }
 
 /* Navigation Menu Items - MAXIMUM VISIBILITY */
