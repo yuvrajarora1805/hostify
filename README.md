@@ -49,6 +49,79 @@ pip install hostify
 
 ---
 
+## 🖥️ CLI Usage
+
+Hostify also provides a powerful command-line interface for quick hosting:
+
+### Installation
+
+```bash
+pip install hostify
+```
+
+### Commands
+
+**Host a static site:**
+```bash
+hostify static ./my-website mysite.example.com
+```
+
+**Host an existing server:**
+```bash
+hostify port 3000 app.example.com
+```
+
+**Show version:**
+```bash
+hostify version
+```
+
+**Get help:**
+```bash
+hostify --help
+```
+
+### Environment Setup
+
+Set your Cloudflare API token:
+
+**Windows (PowerShell):**
+```powershell
+$env:CLOUDFLARE_API_TOKEN="your_token_here"
+```
+
+**Linux/macOS:**
+```bash
+export CLOUDFLARE_API_TOKEN="your_token_here"
+```
+
+### CLI Examples
+
+**Example 1: Host a static portfolio**
+```bash
+hostify static ./portfolio portfolio.example.com
+```
+
+**Example 2: Host a Flask app running on port 5000**
+```bash
+# Terminal 1: Start Flask
+python app.py
+
+# Terminal 2: Host it
+hostify port 5000 flask-app.example.com
+```
+
+**Example 3: Host a React development server**
+```bash
+# Terminal 1: Start React dev server (usually port 3000)
+npm start
+
+# Terminal 2: Host it
+hostify port 3000 react-app.example.com
+```
+
+---
+
 ## 💡 Use Cases
 
 1. **Development** - Share local dev server with team
@@ -322,11 +395,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Custom cloudflared configuration
 - [ ] Load balancing
 - [ ] Health checks and monitoring
-- [ ] CLI tool
+- [x] CLI tool
 
 ---
 
 **Made with ❤️ for developers who want to host from anywhere**
+
+**Created by Yuvraj Arora**
+
+Uses Cloudflare Tunnel & Cloudflare APIs
 
 ---
 

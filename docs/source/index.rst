@@ -100,6 +100,10 @@ Community & Support
 
 .. note::
    Made with ❤️ for developers who want to host from anywhere
+   
+   Created by Yuvraj Arora
+   
+   Uses Cloudflare Tunnel & Cloudflare APIs
 
 Indices and tables
 ==================

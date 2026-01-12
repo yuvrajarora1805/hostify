@@ -7,5 +7,5 @@ using Cloudflare Tunnels, making them accessible via real domains.
 
 from .host import Host
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 __all__ = ["Host"]
