@@ -1,6 +1,8 @@
 Installation
 ============
 
+**Latest Version: 0.2.0** - Now with CLI support!
+
 Requirements
 ------------
 

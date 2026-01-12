@@ -74,7 +74,6 @@ Getting Started
    :caption: API Documentation
 
    api
-   cli
 
 .. toctree::
    :maxdepth: 1
