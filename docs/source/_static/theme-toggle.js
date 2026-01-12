@@ -33,7 +33,7 @@
     function updateButtonText(isMidnight) {
         const button = document.getElementById('theme-toggle');
         if (button) {
-            button.textContent = isMidnight ? 'Light Mode' : 'Midnight Mode';
+            button.textContent = isMidnight ? '☀️ Light Mode' : '🌌 Midnight+';
         }
     }
 

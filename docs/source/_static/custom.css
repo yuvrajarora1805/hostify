@@ -226,6 +226,96 @@
     margin-bottom: 12px !important;
 }
 
+/* ========================================
+   USER GUIDE ENHANCEMENTS
+   ======================================== */
+
+/* 1. Mode Badge - Visual Clarity */
+.mode-badge {
+    font-size: 0.7rem !important;
+    margin-left: 8px !important;
+    padding: 3px 8px !important;
+    border-radius: 999px !important;
+    background: rgba(56,189,248,0.15) !important;
+    color: #7DD3FC !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 600 !important;
+    vertical-align: middle !important;
+}
+
+/* 2. Context Line - Code Explanation */
+.context-line {
+    color: #94A3B8 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 10px !important;
+    margin-top: 1em !important;
+    font-style: italic !important;
+}
+
+.context-line code {
+    background: rgba(250, 204, 21, 0.1) !important;
+    color: var(--text-code-inline) !important;
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+    font-style: normal !important;
+}
+
+/* 3. Code Wrapper - Soft Focus */
+.rst-content .highlight {
+    border: 1px solid rgba(148,163,184,0.12) !important;
+    border-radius: 16px !important;
+    background: radial-gradient(
+        circle at top,
+        rgba(56,189,248,0.06),
+        rgba(15,23,42,0.85)
+    ) !important;
+}
+
+/* 4. Info Box - When to Use */
+.info-box {
+    background: rgba(34,197,94,0.08) !important;
+    border-left: 3px solid #22C55E !important;
+    padding: 16px 20px !important;
+    border-radius: 12px !important;
+    margin: 1.5em 0 !important;
+}
+
+.info-box strong {
+    color: #86EFAC !important;
+    font-weight: 600 !important;
+    display: block !important;
+    margin-bottom: 0.5em !important;
+}
+
+.info-box ul {
+    margin: 0 !important;
+    padding-left: 1.5em !important;
+}
+
+.info-box li {
+    color: #D1FAE5 !important;
+    margin: 0.4em 0 !important;
+}
+
+/* 5. Features List - Benefit-Driven */
+.features {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.features li {
+    margin-bottom: 8px !important;
+    padding-left: 0 !important;
+    color: var(--text-body) !important;
+}
+
+/* 6. Section Rhythm */
+.rst-content .section {
+    margin-top: 56px !important;
+    padding-top: 24px !important;
+    border-top: 1px solid rgba(148,163,184,0.1) !important;
+}
+
 /* Expanded Menu Levels */
 .wy-menu-vertical li.toctree-l1.current > a {
     background: var(--sidebar-active-bg) !important;

@@ -25,6 +25,10 @@ Hostify supports two hosting modes:
 Existing Server Mode
 ~~~~~~~~~~~~~~~~~~~~
 
+.. raw:: html
+
+   <h3>Existing Server Mode <span class="mode-badge">MODE</span></h3>
+
 Use this when you have an application already running locally (Flask, Node.js, PHP, etc.):
 
 .. code-block:: python
@@ -43,7 +47,24 @@ Use this when you have an application already running locally (Flask, Node.js, P
 Static Files Mode
 ~~~~~~~~~~~~~~~~~
 
-Use this to serve static websites:
+.. raw:: html
+
+   <h3>Static Files Mode <span class="mode-badge">MODE</span></h3>
+
+.. raw:: html
+
+   <div class="info-box">
+   <strong>Use this mode if:</strong>
+   <ul>
+     <li>You have a static site (HTML/CSS/JS)</li>
+     <li>You want zero config hosting</li>
+     <li>You're using an old PC or local machine</li>
+   </ul>
+   </div>
+
+.. raw:: html
+
+   <p class="context-line">This will serve your local <code>./public</code> folder at <code>mysite.example.com</code>.</p>
 
 .. code-block:: python
 
@@ -56,10 +77,14 @@ Use this to serve static websites:
 
 **Features:**
 
-- Automatically starts a built-in HTTP server
-- Finds an available port automatically
-- Serves index.html as the default page
-- Supports all static file types (HTML, CSS, JS, images, etc.)
+.. raw:: html
+
+   <ul class="features">
+   <li>🚀 Starts a built-in HTTP server automatically</li>
+   <li>🎯 Finds an available port automatically</li>
+   <li>📄 Serves index.html as the default page</li>
+   <li>📦 Supports all static file types (HTML, CSS, JS, images, etc.)</li>
+   </ul>
 
 Configuration Options
 ---------------------
