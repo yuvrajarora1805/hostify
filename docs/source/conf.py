@@ -37,11 +37,11 @@ html_static_path = ['_static']
 
 # Custom CSS and JS
 html_css_files = [
-    'custom.css',
+    ('custom.css', {'version': '0.2.0'}),
 ]
 
 html_js_files = [
-    'theme-toggle.js',
+    ('theme-toggle.js', {'version': '0.2.0'}),
 ]
 
 # Theme options
