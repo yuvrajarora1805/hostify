@@ -134,17 +134,96 @@
     border-left-color: var(--text-link) !important;
 }
 
-/* Active Menu Item - Subtle Highlight */
+/* Active Menu Item - Subtle Highlight with Glow */
 .wy-menu-vertical li.current > a {
-    background: var(--sidebar-active-bg) !important;
+    background: linear-gradient(90deg, rgba(56,189,248,0.15), rgba(99,102,241,0.08)) !important;
     color: var(--sidebar-active-text) !important;
-    border-left: 2px solid var(--text-link) !important;
+    border-left: none !important;
+    box-shadow: inset 2px 0 0 #38BDF8 !important;
     font-weight: 600 !important;
 }
 
 .wy-menu-vertical li.current a {
     border-right: none !important;
     color: var(--sidebar-text) !important;
+}
+
+/* ========================================
+   UX ENHANCEMENTS
+   ======================================== */
+
+/* 1. Hero Subtext - Emotional Anchor */
+.hero-subtext {
+    color: #94A3B8 !important;
+    font-size: 1.05rem !important;
+    margin-top: 6px !important;
+    margin-bottom: 2em !important;
+    font-weight: 400 !important;
+}
+
+/* 2. Section Dividers - Visual Separation */
+.rst-content .section {
+    padding-top: 32px;
+    margin-top: 48px;
+    border-top: 1px solid rgba(148,163,184,0.12);
+}
+
+.rst-content .section:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+/* 3. Requirements Card - High Signal */
+.requirements-card {
+    background: rgba(15,23,42,0.6) !important;
+    border: 1px solid rgba(148,163,184,0.15) !important;
+    border-radius: 14px !important;
+    padding: 20px 24px !important;
+    margin: 1.5em 0 !important;
+}
+
+.requirements-card p {
+    margin: 0.8em 0 !important;
+    color: var(--text-body) !important;
+    font-size: 0.95rem !important;
+}
+
+.requirements-card p:first-child {
+    margin-top: 0 !important;
+}
+
+.requirements-card p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 4. Code Labels - Professional Touch */
+.code-label {
+    font-size: 0.75rem !important;
+    color: #94A3B8 !important;
+    margin-bottom: 6px !important;
+    margin-top: 1.5em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* 5. Success Message - Brand Personality */
+.success-message {
+    background: linear-gradient(135deg, rgba(74,222,128,0.08), rgba(34,197,94,0.06)) !important;
+    border-left: 3px solid #4ADE80 !important;
+    border-radius: 10px !important;
+    padding: 16px 20px !important;
+    margin: 2em 0 !important;
+    color: #D1FAE5 !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+}
+
+/* 6. Enhanced Section Spacing */
+.rst-content h2 {
+    letter-spacing: 0.4px !important;
+    margin-bottom: 12px !important;
 }
 
 /* Expanded Menu Levels */

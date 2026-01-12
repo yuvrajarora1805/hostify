@@ -1,17 +1,29 @@
 Installation
 ============
 
+.. raw:: html
+
+   <p class="hero-subtext">Get Hostify up and running in under 2 minutes.</p>
+
 **Latest Version: 0.2.0** - Now with CLI support!
 
 Requirements
 ------------
 
-- Python >= 3.9
-- Cloudflare account with a domain
-- Cloudflare API token
+.. raw:: html
+
+   <div class="requirements-card">
+   <p><strong>🐍 Python</strong> >= 3.9</p>
+   <p><strong>☁️ Cloudflare</strong> account with a domain</p>
+   <p><strong>🔑 API Token</strong> from Cloudflare</p>
+   </div>
 
 Install Hostify
 ---------------
+
+.. raw:: html
+
+   <div class="code-label">Terminal</div>
 
 Install from PyPI using pip:
 
@@ -41,11 +53,19 @@ Step 1: Get API Token
 Step 2: Set Environment Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. raw:: html
+
+   <div class="code-label">Windows PowerShell</div>
+
 **Windows (PowerShell):**
 
 .. code-block:: powershell
 
    $env:CF_API_TOKEN="your_token_here"
+
+.. raw:: html
+
+   <div class="code-label">Linux/macOS Terminal</div>
 
 **Linux/Mac:**
 
@@ -75,6 +95,10 @@ Make sure your domain is added to Cloudflare and nameservers are configured.
 Verify Installation
 -------------------
 
+.. raw:: html
+
+   <div class="code-label">Python</div>
+
 Test your installation:
 
 .. code-block:: python
@@ -84,3 +108,10 @@ Test your installation:
 
 .. note::
    If you encounter any issues, check the :doc:`troubleshooting` guide.
+
+.. raw:: html
+
+   <div class="success-message">
+   ✨ Hostify is now ready. Your local machine just became a server.
+   </div>
+
