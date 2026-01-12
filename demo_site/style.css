@@ -47,15 +47,28 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
+/* Navbar - Futuristic Design */
 .navbar {
-    background: rgba(10, 14, 39, 0.8);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(15, 20, 50, 0.95) 0%, rgba(25, 30, 60, 0.95) 100%);
+    backdrop-filter: blur(20px);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    border-image-slice: 1;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+    animation: navbarGlow 3s ease-in-out infinite;
+}
+
+@keyframes navbarGlow {
+    0%, 100% {
+        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+    }
+    50% {
+        box-shadow: 0 8px 32px rgba(118, 75, 162, 0.25);
+    }
 }
 
 .navbar .container {
@@ -65,27 +78,79 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+    animation: logoFloat 3s ease-in-out infinite;
+    position: relative;
+}
+
+.logo::before {
+    content: '🚀 ';
+    animation: rocketFloat 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes rocketFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-5deg);
+    }
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: center;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #e2e8f0;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    padding: 8px 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #667eea;
+    color: #fff;
+    background: rgba(102, 126, 234, 0.1);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::before {
+    width: 80%;
 }
 
 /* Hero Section */
@@ -210,31 +275,75 @@ body {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     padding: 40px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 
+        0 20px 60px rgba(102, 126, 234, 0.4),
+        0 0 40px rgba(118, 75, 162, 0.3),
+        inset 0 0 20px rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.6);
 }
 
 .feature-icon {
-    font-size: 48px;
+    font-size: 56px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+    animation: iconFloat 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .feature-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .feature-card p {
     color: #a0aec0;
-    line-height: 1.6;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
 }
 
 /* Demo Section */
