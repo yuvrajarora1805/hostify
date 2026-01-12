@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hostify"
-version = "0.1.1"
+version = "0.2.0"
 description = "Effortless application hosting using Cloudflare Tunnels."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -34,6 +34,9 @@ Homepage = "https://github.com/yuvrajarora1805/hostify"
 Documentation = "https://github.com/yuvrajarora1805/hostify#readme"
 Repository = "https://github.com/yuvrajarora1805/hostify"
 Issues = "https://github.com/yuvrajarora1805/hostify/issues"
+
+[project.scripts]
+hostify = "hostify.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

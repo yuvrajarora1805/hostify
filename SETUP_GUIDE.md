@@ -30,7 +30,7 @@ pip install hostify
 
 Or install from source:
 ```bash
-git clone https://github.com/yourusername/hostify.git
+git clone https://github.com/yuvrajarora1805/hostify.git
 cd hostify
 pip install -e .
 ```
@@ -243,7 +243,7 @@ git commit -m "Initial commit"
 ### Step 4.3: Push to GitHub
 
 ```bash
-git remote add origin https://github.com/yourusername/hostify.git
+git remote add origin https://github.com/yuvrajarora1805/hostify.git
 git branch -M main
 git push -u origin main
 ```
@@ -399,7 +399,7 @@ your-project/
 - **API Token Setup:** [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md)
 - **Installation Guide:** [INSTALL.md](INSTALL.md)
 - **Publishing Guide:** [PUBLISHING.md](PUBLISHING.md)
-- **Issues:** https://github.com/yourusername/hostify/issues
+- **Issues:** https://github.com/yuvrajarora1805/hostify/issues
 
 ---
 

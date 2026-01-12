@@ -22,7 +22,7 @@ This installs hostify in "editable" mode, so you can make changes and they'll be
 ### Option 2: Install from GitHub (After Publishing)
 
 ```bash
-pip install git+https://github.com/yourusername/hostify.git
+pip install git+https://github.com/yuvrajarora1805/hostify.git
 ```
 
 ### Option 3: Install from PyPI (After Publishing)
@@ -231,3 +231,7 @@ MIT License - see [LICENSE](file:///d:/xamp/htdocs/hostify/LICENSE)
 Built on [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
 
 **Made with ❤️ for developers who want to host from anywhere**
+
+**Created by Yuvraj Arora**
+
+Uses Cloudflare Tunnel & Cloudflare APIs

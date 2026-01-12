@@ -158,8 +158,8 @@ None currently. All tests passing.
 
 ## 📞 Support
 
-- GitHub Issues: https://github.com/yourusername/hostify/issues
-- Documentation: https://github.com/yourusername/hostify#readme
+- GitHub Issues: https://github.com/yuvrajarora1805/hostify/issues
+- Documentation: https://github.com/yuvrajarora1805/hostify#readme
 - Email: your.email@example.com
 
 ---

@@ -37,6 +37,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.2.0] - 2026-01-12
+
+### Added
+- **CLI Tool**: Complete command-line interface for Hostify
+  - `hostify static <directory> <domain>` - Host static sites from the command line
+  - `hostify port <port> <domain>` - Host existing servers via CLI
+  - `hostify version` - Display version information
+  - `hostify --help` - Show comprehensive help
+- Graceful shutdown handling with Ctrl+C
+- User-friendly error messages and validation
+- Environment variable validation for `CLOUDFLARE_API_TOKEN`
+- Signal handlers for clean cleanup on exit
+- Comprehensive CLI documentation
+
+### Changed
+- Updated all version references to 0.2.0
+- Enhanced user experience with direct terminal access
+- Improved error handling and user feedback
+
+### Documentation
+- Added CLI usage examples to README
+- Updated installation instructions for CLI usage
+- Added CLI command reference
+
+---
+
 ## [Unreleased]
 
 ---
@@ -64,4 +90,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-[0.1.0]: https://github.com/yourusername/hostify/releases/tag/v0.1.0
+[0.1.0]: https://github.com/yuvrajarora1805/hostify/releases/tag/v0.1.0
