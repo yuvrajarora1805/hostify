@@ -35,9 +35,13 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Custom CSS
+# Custom CSS and JS
 html_css_files = [
     'custom.css',
+]
+
+html_js_files = [
+    'theme-toggle.js',
 ]
 
 # Theme options

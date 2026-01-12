@@ -1,27 +1,88 @@
 /* ========================================
-   HOSTIFY DOCUMENTATION - FUTURISTIC THEME
-   High Visibility Sidebar & Professional Design
+   HOSTIFY DOCUMENTATION - DARK THEME
+   Midnight Black with Theme Switcher
    ======================================== */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ========================================
-   SIDEBAR - LIGHT BACKGROUND WITH DARK TEXT
+   THEME VARIABLES
    ======================================== */
 
-/* Sidebar Background - Light gradient for dark text visibility */
+:root {
+    --sidebar-bg: linear-gradient(180deg, #1a1f3a 0%, #0f1432 50%, #1a1f3a 100%);
+    --sidebar-text: #e2e8f0;
+    --sidebar-text-hover: #ffffff;
+    --sidebar-active-bg: rgba(102, 126, 234, 0.25);
+    --sidebar-border: #667eea;
+    --content-bg: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+}
+
+/* Midnight Black Theme */
+body.midnight-theme {
+    --sidebar-bg: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+    --sidebar-text: #b0b0b0;
+    --sidebar-text-hover: #ffffff;
+    --sidebar-active-bg: rgba(102, 126, 234, 0.3);
+    --content-bg: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+    --text-primary: #d0d0d0;
+    --text-secondary: #808080;
+}
+
+/* ========================================
+   THEME TOGGLE BUTTON
+   ======================================== */
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+#theme-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.6);
+}
+
+#theme-toggle::before {
+    content: '🌙 ';
+    margin-right: 5px;
+}
+
+body.midnight-theme #theme-toggle::before {
+    content: '☀️ ';
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+
 .wy-nav-side {
-    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%) !important;
-    border-right: 3px solid #667eea !important;
-    box-shadow: 4px 0 30px rgba(102, 126, 234, 0.2) !important;
+    background: var(--sidebar-bg) !important;
+    border-right: 3px solid var(--sidebar-border) !important;
+    box-shadow: 4px 0 30px rgba(102, 126, 234, 0.3) !important;
     font-family: 'Inter', sans-serif !important;
 }
 
-/* Logo/Search Area - Keep purple gradient */
+/* Logo/Search Area */
 .wy-side-nav-search {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4) !important;
 }
 
@@ -35,21 +96,21 @@
 
 /* Search Input */
 .wy-side-nav-search input[type="text"] {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
     color: #ffffff !important;
     border-radius: 8px !important;
 }
 
 .wy-side-nav-search input[type="text"]:focus {
-    background: rgba(255, 255, 255, 0.35) !important;
-    border-color: rgba(255, 255, 255, 0.7) !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Navigation Menu Items - DARK TEXT ON LIGHT BACKGROUND */
+/* Navigation Menu Items */
 .wy-menu-vertical a {
-    color: #1a202c !important;  /* Very dark gray/black */
+    color: var(--sidebar-text) !important;
     font-weight: 600 !important;
     font-size: 15px !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -58,54 +119,52 @@
 }
 
 .wy-menu-vertical a:hover {
-    background: rgba(102, 126, 234, 0.15) !important;
-    color: #667eea !important;  /* Purple on hover */
+    background: rgba(102, 126, 234, 0.2) !important;
+    color: var(--sidebar-text-hover) !important;
     border-left-color: #667eea !important;
     transform: translateX(5px);
-    box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.1) !important;
+    box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.15) !important;
 }
 
-/* Active/Current Menu Item - DARK TEXT WITH PURPLE HIGHLIGHT */
+/* Active/Current Menu Item */
 .wy-menu-vertical li.current > a {
-    background: rgba(102, 126, 234, 0.2) !important;
-    color: #1a202c !important;  /* Dark text */
+    background: var(--sidebar-active-bg) !important;
+    color: var(--sidebar-text-hover) !important;
     border-left: 5px solid #667eea !important;
     font-weight: 700 !important;
-    box-shadow: inset 0 0 25px rgba(102, 126, 234, 0.15) !important;
+    box-shadow: inset 0 0 25px rgba(102, 126, 234, 0.2) !important;
 }
 
 .wy-menu-vertical li.current a {
     border-right: none !important;
 }
 
-/* Expanded Menu - Level 1 */
+/* Expanded Menu Levels */
 .wy-menu-vertical li.toctree-l1.current > a {
-    background: rgba(102, 126, 234, 0.18) !important;
+    background: rgba(102, 126, 234, 0.22) !important;
     border-left: 5px solid #667eea !important;
 }
 
-/* Expanded Menu - Level 2 */
 .wy-menu-vertical li.toctree-l2 > a {
-    color: #2d3748 !important;  /* Dark gray */
+    color: var(--sidebar-text) !important;
     padding-left: 2.5em !important;
     font-weight: 500 !important;
 }
 
 .wy-menu-vertical li.toctree-l2.current > a {
-    background: rgba(118, 75, 162, 0.15) !important;
+    background: rgba(118, 75, 162, 0.2) !important;
     border-left-color: #764ba2 !important;
-    color: #1a202c !important;
+    color: var(--sidebar-text-hover) !important;
 }
 
-/* Expanded Menu - Level 3 */
 .wy-menu-vertical li.toctree-l3 > a {
-    color: #4a5568 !important;  /* Medium dark gray */
+    color: var(--text-secondary) !important;
     padding-left: 3.5em !important;
 }
 
-/* Section Headers in Sidebar - DARK PURPLE */
+/* Section Headers */
 .wy-menu-vertical p.caption {
-    color: #5b21b6 !important;  /* Dark purple */
+    color: #a5b4fc !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
     font-size: 0.9em !important;
@@ -113,95 +172,25 @@
     margin-top: 1.5em !important;
     padding-left: 1.5em !important;
     border-left: 5px solid #667eea !important;
-    text-shadow: none !important;  /* No glow on light background */
-}
-
-/* Navigation Menu Items - MAXIMUM VISIBILITY */
-.wy-menu-vertical a {
-    color: #ffffff !important;  /* Pure white for maximum visibility */
-    font-weight: 600 !important;  /* Bolder text */
-    font-size: 15px !important;  /* Slightly larger */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    border-left: 3px solid transparent !important;
-    padding: 0.6em 1.5em !important;
-}
-
-.wy-menu-vertical a:hover {
-    background: rgba(102, 126, 234, 0.3) !important;  /* Brighter hover */
-    color: #ffffff !important;
-    border-left-color: #667eea !important;
-    transform: translateX(5px);
-    box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.25) !important;
-}
-
-/* Active/Current Menu Item - BRIGHT HIGHLIGHT */
-.wy-menu-vertical li.current > a {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.5) 0%, transparent 100%) !important;  /* Brighter gradient */
-    color: #ffffff !important;
-    border-left: 4px solid #667eea !important;  /* Thicker border */
-    font-weight: 700 !important;  /* Even bolder */
-    box-shadow: inset 0 0 25px rgba(102, 126, 234, 0.3) !important;
-}
-
-.wy-menu-vertical li.current a {
-    border-right: none !important;
-}
-
-/* Expanded Menu - Level 1 */
-.wy-menu-vertical li.toctree-l1.current > a {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.4) 0%, transparent 100%) !important;
-    border-left: 4px solid #667eea !important;
-}
-
-/* Expanded Menu - Level 2 */
-.wy-menu-vertical li.toctree-l2 > a {
-    color: #f0f0f0 !important;  /* Very bright gray */
-    padding-left: 2.5em !important;
-    font-weight: 500 !important;
-}
-
-.wy-menu-vertical li.toctree-l2.current > a {
-    background: linear-gradient(90deg, rgba(118, 75, 162, 0.35) 0%, transparent 100%) !important;
-    border-left-color: #764ba2 !important;
-    color: #ffffff !important;
-}
-
-/* Expanded Menu - Level 3 */
-.wy-menu-vertical li.toctree-l3 > a {
-    color: #e0e0e0 !important;  /* Bright gray */
-    padding-left: 3.5em !important;
-}
-
-/* Section Headers in Sidebar - MAXIMUM BRIGHTNESS */
-.wy-menu-vertical p.caption {
-    color: #a5b4fc !important;  /* Bright purple/blue */
-    font-weight: 800 !important;  /* Extra bold */
-    text-transform: uppercase !important;
-    font-size: 0.9em !important;  /* Slightly larger */
-    letter-spacing: 2px !important;  /* More spacing */
-    margin-top: 1.5em !important;
-    padding-left: 1.5em !important;
-    border-left: 4px solid #667eea !important;  /* Thicker border */
-    text-shadow: 0 0 20px rgba(102, 126, 234, 0.8) !important;  /* Stronger glow */
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.6) !important;
 }
 
 /* ========================================
    MAIN CONTENT AREA
    ======================================== */
 
-/* Background */
 .wy-nav-content-wrap {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    background: var(--content-bg) !important;
 }
 
 .wy-nav-content {
-    background: rgba(255, 255, 255, 0.02) !important;
+    background: transparent !important;
     max-width: 1200px !important;
     padding: 2em !important;
-    color: #e2e8f0 !important;
+    color: var(--text-primary) !important;
 }
 
-/* Headers - Gradient Text */
+/* Headers */
 .rst-content h1,
 .rst-content h2,
 .rst-content h3 {
@@ -218,18 +207,17 @@
     border-image: linear-gradient(90deg, #667eea 0%, #764ba2 50%, transparent 100%);
     border-image-slice: 1;
     padding-bottom: 0.5em;
-    margin-bottom: 1em;
 }
 
-/* Paragraphs and Lists */
+/* Text */
 .rst-content p,
 .rst-content li,
 .rst-content td {
-    color: #e2e8f0 !important;
+    color: var(--text-primary) !important;
     line-height: 1.8 !important;
 }
 
-/* Links - Neon Effect */
+/* Links */
 .rst-content a {
     color: #667eea !important;
     text-decoration: none !important;
@@ -241,38 +229,35 @@
     text-shadow: 0 0 10px rgba(102, 126, 234, 0.5) !important;
 }
 
-/* Code Blocks - Futuristic Style */
+/* Code Blocks */
 .rst-content pre,
 .rst-content code {
-    background: rgba(0, 0, 0, 0.5) !important;
+    background: rgba(0, 0, 0, 0.6) !important;
     border: 1px solid rgba(102, 126, 234, 0.3) !important;
     border-radius: 8px !important;
     color: #e2e8f0 !important;
 }
 
 .rst-content .highlight {
-    background: rgba(0, 0, 0, 0.4) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
     border-radius: 10px !important;
     border: 1px solid rgba(102, 126, 234, 0.3) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Inline Code - Neon Highlight */
 .rst-content code.literal {
     background: rgba(102, 126, 234, 0.2) !important;
     color: #c3e88d !important;
     padding: 3px 8px !important;
     border-radius: 4px !important;
     border: 1px solid rgba(102, 126, 234, 0.4) !important;
-    font-weight: 500 !important;
 }
 
-/* Admonitions (Notes, Warnings) */
+/* Admonitions */
 .rst-content .admonition {
     background: rgba(102, 126, 234, 0.1) !important;
     border-left: 4px solid #667eea !important;
     border-radius: 8px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
     padding: 1.5em !important;
 }
 
@@ -280,31 +265,13 @@
     background: rgba(102, 126, 234, 0.25) !important;
     color: #ffffff !important;
     font-weight: 600 !important;
-    padding: 0.5em 1em !important;
-    margin: -1.5em -1.5em 1em -1.5em !important;
-    border-radius: 8px 8px 0 0 !important;
 }
 
-.rst-content .note {
-    border-left-color: #667eea !important;
-}
-
-.rst-content .warning {
-    border-left-color: #f093fb !important;
-    background: rgba(240, 147, 251, 0.1) !important;
-}
-
-.rst-content .tip {
-    border-left-color: #27c93f !important;
-    background: rgba(39, 201, 63, 0.1) !important;
-}
-
-/* Tables - Futuristic Design */
+/* Tables */
 .rst-content table.docutils {
     border: 1px solid rgba(102, 126, 234, 0.3) !important;
     background: rgba(0, 0, 0, 0.3) !important;
     border-radius: 8px !important;
-    overflow: hidden;
 }
 
 .rst-content table.docutils thead {
@@ -315,22 +282,15 @@
     color: #ffffff !important;
     font-weight: 600 !important;
     border-bottom: 2px solid #667eea !important;
-    padding: 12px !important;
-}
-
-.rst-content table.docutils td {
-    border-color: rgba(102, 126, 234, 0.2) !important;
-    padding: 10px !important;
 }
 
 /* ========================================
-   TOP NAVIGATION BAR
+   TOP NAVIGATION
    ======================================== */
 
 .wy-nav-top {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     box-shadow: 0 2px 15px rgba(102, 126, 234, 0.4) !important;
-    color: #ffffff !important;
 }
 
 /* Breadcrumbs */
@@ -338,7 +298,6 @@
     background: rgba(102, 126, 234, 0.08) !important;
     padding: 1em !important;
     border-radius: 8px !important;
-    margin-bottom: 1.5em !important;
 }
 
 .wy-breadcrumbs li a {
@@ -346,7 +305,7 @@
 }
 
 /* ========================================
-   SCROLLBAR - Futuristic Style
+   SCROLLBAR
    ======================================== */
 
 .wy-side-scroll::-webkit-scrollbar {
@@ -367,33 +326,14 @@
     box-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
 }
 
-/* Main Content Scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-}
-
 /* ========================================
-   FOOTER & VERSION SELECTOR
+   FOOTER & VERSION
    ======================================== */
 
 footer {
     background: rgba(0, 0, 0, 0.4) !important;
     border-top: 2px solid rgba(102, 126, 234, 0.3) !important;
-    color: #a0aec0 !important;
+    color: var(--text-secondary) !important;
 }
 
 .rst-versions {
@@ -408,21 +348,6 @@ footer {
 .rst-versions .rst-current-version {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%) !important;
     color: #ffffff !important;
-    font-weight: 600 !important;
-}
-
-/* ========================================
-   MOBILE RESPONSIVENESS
-   ======================================== */
-
-@media screen and (max-width: 768px) {
-    .wy-nav-side {
-        box-shadow: 2px 0 15px rgba(102, 126, 234, 0.4) !important;
-    }
-    
-    .wy-nav-content {
-        padding: 1em !important;
-    }
 }
 
 /* ========================================
@@ -431,10 +356,4 @@ footer {
 
 * {
     transition: background 0.3s ease, border 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-/* Prevent transition on page load */
-.wy-nav-side,
-.wy-side-nav-search {
-    transition: none !important;
 }
