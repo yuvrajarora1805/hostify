@@ -249,8 +249,23 @@ Host(domain="app.yourdomain.com", port=3000).serve()
 
 Check out these live examples hosted with hostify:
 
-- **Static Site:** https://hostify.yaspik.tech
+- **Demo Site:** https://hostify.yaspik.tech ✨ *Now with futuristic theme!*
 - **Flask App:** https://app.yaspik.tech
+
+> [!TIP]
+> The demo site features a stunning futuristic design with neon effects, glassmorphism, and smooth animations. Check out [THEME_UPDATE.md](THEME_UPDATE.md) for details on the enhanced UI.
+
+---
+
+## 📘 Documentation
+
+**Comprehensive documentation is now available!**
+
+- **Full Documentation:** [Read the Docs](https://hostify.readthedocs.io) (coming soon)
+- **Installation Guide:** [INSTALL.md](INSTALL.md)
+- **Cloudflare Setup:** [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md)
+- **Publishing Guide:** [PUBLISHING.md](PUBLISHING.md)
+- **Theme Updates:** [THEME_UPDATE.md](THEME_UPDATE.md)
 
 ---
 
