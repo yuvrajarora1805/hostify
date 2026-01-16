@@ -297,7 +297,12 @@ class Host:
                 self.cf.delete_dns_record(self.zone_id, self.dns_record_id)
                 print("    [OK] Deleted DNS record")
             except Exception as e:
-                print(f"    [WARN] Error deleting DNS record: {str(e)}")
+                # If it's already deleted (404), that's fine - no warning needed
+                error_str = str(e)
+                if "404" in error_str or "not found" in error_str.lower():
+                    print("    [OK] DNS record already deleted")
+                else:
+                    print(f"    [WARN] Error deleting DNS record: {error_str}")
         
         # Delete tunnel
         if self.tunnel_id:
