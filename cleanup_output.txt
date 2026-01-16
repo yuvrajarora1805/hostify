@@ -1,0 +1,23 @@
+
+============================================================
+HOSTIFY - Force Tunnel Cleanup Utility
+============================================================
+
+Target Tunnel ID: c9187679-cc9e-412c-aa56-c05025f8fec6
+
+[+] Using API token from CLOUDFLARE_API_TOKEN environment variable
+
+[FORCE CLEANUP] Starting cleanup for tunnel: c9187679-cc9e-412c-aa56-c05025f8fec6
+============================================================
+[+] Connected to Cloudflare account: b6cd01392fc7bbf350dbae29b5d9b756
+
+[+] Checking if tunnel exists...
+    [WARN] Tunnel c9187679-cc9e-412c-aa56-c05025f8fec6 not found in account
+    It may have been already deleted
+
+============================================================
+[SUCCESS] Cleanup completed successfully!
+
+The tunnel has been removed from your Cloudflare account.
+============================================================
+

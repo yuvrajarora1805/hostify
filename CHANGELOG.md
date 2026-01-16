@@ -63,6 +63,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+---
+
+## [0.2.1] - 2026-01-16
+
+### Fixed
+- **Tunnel Deletion**: Fixed 400 Bad Request error when deleting tunnels with active connections
+  - Added force deletion option to clean up connections before deleting tunnel
+  - Improved error handling for already-deleted resources (404 errors)
+  - Better cleanup process that handles orphaned tunnels gracefully
+- **API Token Support**: Added support for `CLOUDFLARE_API_TOKEN` environment variable
+  - Library now accepts both `CF_API_TOKEN` and `CLOUDFLARE_API_TOKEN`
+  - Improved API token detection and error messages
+  - Better compatibility with different Cloudflare setups
+
+### Changed
+- Enhanced `delete_tunnel()` method with optional `force` parameter
+- Updated cleanup process to use force deletion by default
+- Improved error messages for API token configuration
+
+### Added
+- Force cleanup utility script for manually removing orphaned tunnels
+- Better handling of tunnel connection cleanup
+
+---
+
 ## [Unreleased]
 
 ---

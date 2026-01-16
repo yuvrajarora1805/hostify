@@ -17,7 +17,7 @@ class Cloudflare:
     """
     Cloudflare API client for managing tunnels and DNS records.
     
-    Requires CF_API_TOKEN environment variable with permissions:
+    Requires CF_API_TOKEN or CLOUDFLARE_API_TOKEN environment variable with permissions:
     - Account → Cloudflare Tunnel → Edit
     - Zone → DNS → Edit
     - Zone → Read
@@ -30,16 +30,16 @@ class Cloudflare:
         Initialize Cloudflare API client.
         
         Args:
-            api_token: Cloudflare API token. If None, reads from CF_API_TOKEN env var.
+            api_token: Cloudflare API token. If None, reads from CF_API_TOKEN or CLOUDFLARE_API_TOKEN env var.
         
         Raises:
             CloudflareAPIError: If API token is not provided.
         """
-        self.api_token = api_token or os.getenv("CF_API_TOKEN")
+        self.api_token = api_token or os.getenv("CF_API_TOKEN") or os.getenv("CLOUDFLARE_API_TOKEN")
         if not self.api_token:
             raise CloudflareAPIError(
-                "Cloudflare API token not found. Set CF_API_TOKEN environment variable "
-                "or pass api_token parameter."
+                "Cloudflare API token not found. Set CF_API_TOKEN or CLOUDFLARE_API_TOKEN "
+                "environment variable or pass api_token parameter."
             )
         
         # Cache for account and zone IDs
@@ -205,15 +205,31 @@ class Cloudflare:
         
         return tunnel_id, credentials
     
-    def delete_tunnel(self, tunnel_id: str) -> None:
+    def delete_tunnel(self, tunnel_id: str, force: bool = False) -> None:
         """
         Delete a Cloudflare Tunnel.
         
         Args:
             tunnel_id: Tunnel ID to delete
+            force: If True, attempts to clean up connections before deleting
         """
         account_id = self.get_account_id()
-        self._make_request("DELETE", f"/accounts/{account_id}/cfd_tunnel/{tunnel_id}")
+        
+        if force:
+            # Try to delete connections first (ignore errors if none exist)
+            try:
+                self._make_request("DELETE", f"/accounts/{account_id}/cfd_tunnel/{tunnel_id}/connections")
+            except CloudflareAPIError:
+                pass  # Connections might not exist, that's okay
+        
+        # Delete the tunnel
+        try:
+            self._make_request("DELETE", f"/accounts/{account_id}/cfd_tunnel/{tunnel_id}")
+        except CloudflareAPIError as e:
+            # If it's already deleted (404), that's fine
+            if "404" in str(e) or "not found" in str(e).lower():
+                return
+            raise
     
     def list_tunnels(self) -> List[Dict]:
         """

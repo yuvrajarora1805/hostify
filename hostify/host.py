@@ -302,7 +302,7 @@ class Host:
         # Delete tunnel
         if self.tunnel_id:
             try:
-                self.cf.delete_tunnel(self.tunnel_id)
+                self.cf.delete_tunnel(self.tunnel_id, force=True)
                 print("    [OK] Deleted tunnel")
             except Exception as e:
                 print(f"    [WARN] Error deleting tunnel: {str(e)}")
